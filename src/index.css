@@ -2,41 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Luxury Hotel Design System - Warm & Elegant Theme
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Warm Background Palette */
+    --background: 42 22% 97%; /* Warm ivory */
+    --foreground: 220 25% 15%; /* Deep navy */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Card & Surface Colors */
+    --card: 40 30% 96%; /* Warm white */
+    --card-foreground: 220 25% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Interactive Elements */
+    --popover: 40 30% 96%;
+    --popover-foreground: 220 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Brand Colors - Navy & Gold */
+    --primary: 220 60% 20%; /* Luxury navy */
+    --primary-foreground: 42 22% 97%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Warm Beige */
+    --secondary: 40 20% 90%; /* Warm beige */
+    --secondary-foreground: 220 25% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Accent - Gold */
+    --accent: 45 85% 55%; /* Luxury gold */
+    --accent-foreground: 220 25% 15%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Muted Tones */
+    --muted: 40 15% 92%; /* Light beige */
+    --muted-foreground: 220 15% 45%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Status Colors */
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 42 22% 97%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders & Inputs */
+    --border: 40 15% 88%;
+    --input: 40 15% 88%;
+    --ring: 45 85% 55%; /* Gold focus ring */
 
-    --radius: 0.5rem;
+    /* Design System Extras */
+    --radius: 0.75rem;
+    
+    /* Custom Hotel Theme Colors */
+    --luxury-gold: 45 85% 55%;
+    --warm-beige: 40 20% 90%;
+    --ivory: 42 22% 97%;
+    --navy-deep: 220 60% 20%;
+    --gold-light: 45 85% 70%;
+    --beige-dark: 40 20% 75%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(220 60% 20% / 0.8), hsl(220 60% 20% / 0.6));
+    --gradient-gold: linear-gradient(135deg, hsl(45 85% 55%), hsl(45 85% 70%));
+    --gradient-warm: linear-gradient(180deg, hsl(42 22% 97%), hsl(40 20% 90%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(220 60% 20% / 0.1);
+    --shadow-elegant: 0 8px 32px hsl(220 60% 20% / 0.15);
+    --shadow-gold: 0 4px 20px hsl(45 85% 55% / 0.2);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +128,49 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
+  }
+}
+
+/* Hotel-specific component utilities */
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+  
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+  
+  .text-luxury-gold {
+    color: hsl(var(--luxury-gold));
+  }
+  
+  .bg-warm-beige {
+    background-color: hsl(var(--warm-beige));
+  }
+  
+  .bg-ivory {
+    background-color: hsl(var(--ivory));
+  }
+  
+  .text-navy-deep {
+    color: hsl(var(--navy-deep));
   }
 }

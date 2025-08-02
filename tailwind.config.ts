@@ -61,7 +61,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Hotel theme colors
+				'luxury-gold': 'hsl(var(--luxury-gold))',
+				'warm-beige': 'hsl(var(--warm-beige))',
+				'ivory': 'hsl(var(--ivory))',
+				'navy-deep': 'hsl(var(--navy-deep))',
+				'gold-light': 'hsl(var(--gold-light))',
+				'beige-dark': 'hsl(var(--beige-dark))'
+			},
+			fontFamily: {
+				'heading': ['Playfair Display', 'serif'],
+				'body': ['Inter', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
